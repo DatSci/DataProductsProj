@@ -11,7 +11,9 @@ shinyUI(fluidPage(
                 sliderInput('duration', 'Days to Expiration', min=1, max=180, value=1, 
                             step = 1, round = TRUE),
                 h4("Theoretical Option Values (call/put):"),
+                h5("Theoretical Call Value"),
                 textOutput('value1'),
+                h5("Theoretical Put Value"),
                 textOutput('value2')
                 
                 ),
@@ -36,7 +38,7 @@ shinyUI(fluidPage(
                 h5("Implied Volatility"),
                 p("This is the volatility of the stock price in annual terms. 
                         The default is set at 10%. The value cannot be below zero and
-                        maximum is set at 100$ with a step size of 1%"),
+                        maximum is set at 100% with a step size of 1%"),
                 h5("Risk-free Interest Rate"),
                 p("Risk-free Interest Rate is usually the U.S. Treasury Bill or Note rate. 
                         This represents the interest rate on the most credit worthy instrument. 
